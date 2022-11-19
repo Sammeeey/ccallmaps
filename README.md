@@ -39,6 +39,7 @@
 > format of result sheet: *firstSheetOfListStem-lastSheetOfListStem.csv*
 
 - move one or more search-result-HTMLs to same directory as `findFilterInfo.py`
+  - **delete search results from single searches eventually!**
   - open directory in windows file explorer
     - sort files by name (ascending)
     - highlight one or more HTML files
