@@ -1,0 +1,35 @@
+# systemd unit file for the ccallmaps.py
+# original source & tutorial: https://github.com/torfsen/python-systemd-tutorial/blob/master/python_demo_service.service
+# service saved in: /etc/systemd/user/ccallmaps.service
+
+[Unit]
+
+# Human readable name of the unit
+Description=Cold Call Maps Service
+
+
+[Service]
+
+# Command to execute when the service is started
+ExecStart=/home/pi/Dokumente/pwmaps/venv/bin/python3 /home/pi/Dokumente/pwmaps/ccallmaps20-slow-systemd.py
+
+# Disable Python's buffering of STDOUT and STDERR, so that output from the
+# service shows up immediately in systemd's logs
+# Environment=PYTHONUNBUFFERED=1
+
+# Automatically restart the service - not only if it crashes - always: https://www.freedesktop.org/software/systemd/man/systemd.service.html#Restart=
+Restart=always
+
+# Our service will notify systemd once it is up and running
+# Type=notify
+
+# Use a dedicated user to run our service
+# https://www.freedesktop.org/software/systemd/man/systemd.exec.html#User/Group%20Identity
+# User=pi
+
+
+[Install]
+
+# Tell systemd to automatically start this service when the system boots
+# (assuming the service is enabled)
+# WantedBy=default.target
