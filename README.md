@@ -40,7 +40,11 @@
 
 - move one or more search-result-HTMLs to same directory as `findFilterInfo.py`
   - open directory in windows file explorer
-  - highlight one or more HTML files & press CTRL+C to copy filenames
+    - sort files by name (ascending)
+    - highlight one or more HTML files
+      - **click on HTML file with biggest plz first** (bottom), then scroll to top, press+hold Shift & click HTML file with smalles plz (to highlight all files)
+        > Do it that way so that smalles plz is at beginning & biggest plz at end of list in `findFilterInfo.py` later - so that output-CSV named *smallestPlz_targetGroup-biggestPlz_targetGroup.csv*
+      - press CTRL+C to copy filenames
 - open `findFilterInfo.py` in VSCode
   - create `fileInput` list at beginning of `findFilterInfo.py` & paste copied HTML-filenames between brackets
   - delete .html-extension from all filenames (can be done by highlighting all files using CTRL+D (several times))
