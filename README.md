@@ -189,7 +189,7 @@
 
 ## potential improvements
 - docs: create video examples/walk-throughs of programs & workflows
-- make `ccallmaps.py` run headless on Raspberry Pi (or any other server)
+- [x] [make `ccallmaps.py` run headless on Raspberry Pi (or any other server)](https://github.com/Sammeeey/ccallmaps/commit/614d8b410e0681b9dbed50d494cac132a428cc41)
 - automate further parts of the workflow (find & store HTML search results with `ccallmaps.py` & immediately convert into non-duplicate-CSV of search results)
   - move step of comparing non-duplicate search-result-CSV with active coldCall-CSV from `pdMerge_onlyUnqiue.py` as optional(?) function to `findFilterInfo.py`
   - !(easy&time-saving:) make `findFilterInfo.py` automatically create csv from all HTML files in directory (which match certain naming pattern)
