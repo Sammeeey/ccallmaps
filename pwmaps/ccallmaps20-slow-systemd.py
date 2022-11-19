@@ -1,5 +1,5 @@
 # ccallmaps.py - starts chrome browser & searches through list of given search terms on Google Maps (after denying cookies) - works only for German Maps so far - super unstable
-# 22-11-18; 09:00
+# 22-11-19; 17:00
 from datetime import datetime
 from fileOperations import findByCriterion, find1stfilePart
 from pathlib import Path
@@ -19,7 +19,7 @@ targetGroup = 'heilpraktiker'
 
 pathToDir = Path.cwd() # to make usage of variable as argument in find1stfilePart(dirPath=pathToDir) possible on all operating systems (win, linux, systemd) - always active on win & linux, but overwritten by following lines on systemd
 
-pathToDir = Path.cwd() / 'Dokumente' / 'pwmaps' # absolute !!Raspberry Pi!! path to directory which contains this file and all other related files
+pathToDir = Path.cwd() / 'Dokumente' / 'ccallmaps' / 'pwmaps' # absolute !!Raspberry Pi!! path to directory which contains this file and all other related files
 # ^^^^^^ACTIVATE BLOCK ON RASPBERRY PI^^^^^^ (when using with systemd) & uncomment on windows (or when using on raspberry pi manually)
 
 logging.basicConfig(filename=f'{sys.argv[0].split(".")[0]}.log', encoding='utf-8', level=logging.INFO)  # use this scripts name: https://stackoverflow.com/a/4152992

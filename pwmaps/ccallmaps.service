@@ -11,7 +11,7 @@ Description=Cold Call Maps Service
 [Service]
 
 # Command to execute when the service is started
-ExecStart=/home/pi/Dokumente/pwmaps/venv/bin/python3 /home/pi/Dokumente/pwmaps/ccallmaps20-slow-systemd.py
+ExecStart=/home/pi/Dokumente/ccallmaps/venv/bin/python3 /home/pi/Dokumente/ccallmaps/pwmaps/ccallmaps20-slow-systemd.py
 
 # Disable Python's buffering of STDOUT and STDERR, so that output from the
 # service shows up immediately in systemd's logs
