@@ -39,7 +39,7 @@ def checkPageElemVisible(p, selector):
 
 
 def run(playwright: Playwright, targetGroup, searchRegion) -> None:
-    browser = playwright.chromium.launch(headless=False, slow_mo=20000) # alll executions slowed down, so that maps doesn't just refuse to load further artciles (DOESN'T WORK: while loop seemingly regarded as one action): https://github.com/microsoft/playwright/issues/5900 & https://playwright.dev/python/docs/api/class-browsertype#browser-type-launch
+    browser = playwright.chromium.launch(headless=True, slow_mo=20000) # alll executions slowed down, so that maps doesn't just refuse to load further artciles (DOESN'T WORK: while loop seemingly regarded as one action): https://github.com/microsoft/playwright/issues/5900 & https://playwright.dev/python/docs/api/class-browsertype#browser-type-launch
     context = browser.new_context()
 
     page = context.new_page()
